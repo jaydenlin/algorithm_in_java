@@ -7,7 +7,7 @@ public class bagProblem {
 	static int[] weight = { 2, 1, 3, 2 };
 	static int[] value = { 3, 2, 4, 2 };
 	static int limitWeight = 5;
-	static int sumValue = 0;//outside value ¾ğª¬µ²ºcªº[¼È®É¸Ñ]³q±`¦s¦b¥~³¡
+	static int sumValue = 0;//outside value æ¨¹ç‹€çµæ§‹çš„[æš«æ™‚è§£]é€šå¸¸å­˜åœ¨å¤–éƒ¨
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		carry(0, 0);
@@ -19,7 +19,7 @@ public class bagProblem {
 		if (itemIndex == itemNumber) {
 			System.out.println(sumValue);
 		} else if ((weight[itemIndex] + sumWeight) <= limitWeight) {
-			sumValue = Math.max(sumValue, sumValue + value[itemIndex]);//save the greater one to outside ¤ñ¸û¨C­Ó[¸­]
+			sumValue = Math.max(sumValue, sumValue + value[itemIndex]);//save the greater one to outside æ¯”è¼ƒæ¯å€‹[è‘‰]
 			carry(itemIndex + 1, sumWeight + weight[itemIndex]);
 		} else {
 			carry(itemIndex + 1, sumWeight);

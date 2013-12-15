@@ -30,7 +30,7 @@ public class polynomial {
 
 		for (int ix = 0; ix < coefficients.length; ix++) {
 
-			/*the direction is wrong ­n±q°ª¾­¦¸©¹§C¾­¦¸»¼±À*/
+			/*the direction is wrong è¦å¾žé«˜å†ªæ¬¡å¾€ä½Žå†ªæ¬¡éžæŽ¨*/
 //			for (int iy = 0; iy < coefficients[ix].length; iy++) {
 //				resultOfYDimention=resultOfYDimention*yValue+coefficients[ix][iy];
 //			}
