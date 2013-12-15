@@ -30,7 +30,7 @@ public class polynomial {
 
 		for (int ix = 0; ix < coefficients.length; ix++) {
 
-			/*the direction is wrong*/
+			/*the direction is wrong 要從高冪次往低冪次遞推*/
 //			for (int iy = 0; iy < coefficients[ix].length; iy++) {
 //				resultOfYDimention=resultOfYDimention*yValue+coefficients[ix][iy];
 //			}
