@@ -28,8 +28,8 @@ public class BinaryTree {
 		bNode.leftChain = eNode;
 		bNode.rightChain = fNode;
 
-		System.out.print(isDataAtTree(root, "c"));
-
+		System.out.println(isDataAtTree(root, "c"));
+		System.out.println(treeDepth(root));
 	}
 
 	static boolean isDataAtTree(TreeNode treeNode, String data) {
@@ -46,6 +46,21 @@ public class BinaryTree {
 
 		return isThere;
 	}
-	
 
+	static int treeDepth(TreeNode treeNode){
+		int depthLeft=0;
+		int depthRight=0;
+		
+		if(treeNode==null){//in the end 
+			return 0;
+		}else{
+			depthLeft=treeDepth(treeNode.leftChain);
+			depthRight=treeDepth(treeNode.rightChain);
+			if(depthLeft>depthRight){
+				return depthLeft+1;
+			}else {
+				return depthRight+1;
+			}
+		}
+	}
 }
