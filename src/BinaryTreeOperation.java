@@ -50,7 +50,7 @@ public class BinaryTreeOperation {
 		
 		//前序拜訪的變形
 		if (node == null) {
-
+			//不用擔心左右子樹是否為null，因為在這裡傳進來的時候會處理掉
 			return null;
 
 		} else if (node.data.equals(data)) {
