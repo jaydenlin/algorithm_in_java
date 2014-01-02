@@ -10,6 +10,7 @@ public class GraphOperation {
 		// TODO Auto-generated method stub
 		GraphMatrix graphMatrix=createGraph(8, 20);
 		printGraph(graphMatrix);
+		visit(graphMatrix);
 
 	}
 	
@@ -52,6 +53,29 @@ public class GraphOperation {
 			}
 			System.out.println("");
 		}
+	}
+	
+	public static void visit(GraphMatrix graphMatrix){
+		
+		for(int i=0;i<graphMatrix.vertex.length;i++){
+			if(graphMatrix.isVisited[i]!=true){//要加上判斷才對
+				deepFirstVisit(graphMatrix,i);
+			}
+		}
+		
+	}
+	
+	
+	public static void deepFirstVisit(GraphMatrix graphMatrix,int index){
+		
+		graphMatrix.isVisited[index]=true;
+		System.out.println("=>"+index);
+		for(int k=0;k<graphMatrix.vertex.length;k++){
+			if(graphMatrix.weightEdge[index][k]!=0&&graphMatrix.isVisited[k]==false){
+				deepFirstVisit(graphMatrix, k);
+			}
+		}
+		
 	}
 	
 	
