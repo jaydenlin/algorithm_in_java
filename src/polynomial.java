@@ -21,7 +21,7 @@ public class polynomial {
 		}
 		return result;
 	}
-	
+	//遞推由上而下存取樹
 	//like a tree structure
 	private static double TwoD(double[][] coefficients, double xValue, double yValue) {
 
