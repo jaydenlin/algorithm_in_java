@@ -15,13 +15,16 @@ public class bagProblem {
 	}
 
 	private static void carry(int itemIndex, int sumWeight) {
-		
+		//前序拜訪的變形
 		if (itemIndex == itemNumber) {
 			System.out.println(sumValue);
 		} else if ((weight[itemIndex] + sumWeight) <= limitWeight) {
+			//先visit，即修改外部值sumValue
 			sumValue = Math.max(sumValue, sumValue + value[itemIndex]);//save the greater one to outside 比較每個[葉]
+			//拜訪一分支
 			carry(itemIndex + 1, sumWeight + weight[itemIndex]);
 		} else {
+			//或拜訪另一分支
 			carry(itemIndex + 1, sumWeight);
 		}
 	}
