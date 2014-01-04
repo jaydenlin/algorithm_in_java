@@ -22,7 +22,7 @@ public class SelectionSort {
 				
 				if(a[k]<a[index]){
 					
-					index=k;
+					index=k;//更新index
 				}
 				
 				k++;
