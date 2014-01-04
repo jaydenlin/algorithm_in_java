@@ -21,12 +21,13 @@ public class ShellSort {
 			for(int i=r;i<a.length;i++){
 	
 				int temp = a[i];//a[i]右側數列
-				int j = i-r; //a[j]對應的左側數列
+				int j = i-r; //a[j]對應的左側數列,r剛好是跟i 的距離
 				while(j>=0&&temp<a[j]){
 					a[j+r]=a[j];//往右移動
-					j=j-r;//從右邊開始比
+					j=j-r;//從後面（右邊）開始比，從後面開始移才不會移動時洗掉本來的值
 				}
-				a[j+r] = temp;
+				a[j+r] = temp;//若無執行到while，直接插入再最後一項
+				//若有執行while,因為有j=j-r所以a[j+r]會插在前面（剛好符合條件temp<a[j]的j）
 			}
 		}
 		
