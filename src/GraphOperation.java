@@ -57,8 +57,9 @@ public class GraphOperation {
 	
 	public static void visit(GraphMatrix graphMatrix){
 		
+		//尋遍每一個點
 		for(int i=0;i<graphMatrix.vertex.length;i++){
-			if(graphMatrix.isVisited[i]!=true){//�n�[�W�P�_�~��
+			if(graphMatrix.isVisited[i]!=true){//看是否被拜訪過
 				deepFirstVisit(graphMatrix,i);
 			}
 		}
@@ -67,9 +68,10 @@ public class GraphOperation {
 	
 	
 	public static void deepFirstVisit(GraphMatrix graphMatrix,int index){
-		
+		//前序拜訪的變形
 		graphMatrix.isVisited[index]=true;
 		System.out.println("=>"+index);
+		//尋遍點的鄰居
 		for(int k=0;k<graphMatrix.vertex.length;k++){
 			if(graphMatrix.weightEdge[index][k]!=0&&graphMatrix.isVisited[k]==false){
 				deepFirstVisit(graphMatrix, k);

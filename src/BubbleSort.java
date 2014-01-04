@@ -4,7 +4,7 @@ public class BubbleSort {
 	/**
 	 * @param args
 	 */
-	static int[] a={3,14,1,34,23,56,34,33,89,23,12};
+	static int[] a={3,14,1,34,21,56,35,33,89,23,12};
 	
 	
 	public static void main(String[] args) {

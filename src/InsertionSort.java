@@ -4,7 +4,7 @@ public class InsertionSort {
 	/**
 	 * @param args
 	 */
-	static int[] a={3,14,1,34,23,56,34,33,89,23,12};
+	static int[] a={3,14,1,34,21,56,35,33,89,23,12};
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		insertionSort(a);
@@ -16,7 +16,7 @@ public class InsertionSort {
 			
 			int temp=a[i];
 			int k=i-1;
-			while(k>=0 && a[k]>temp){
+			while(k>=0 && a[k]>temp){//這樣寫可以省一個迴圈
 				
 				a[k+1]=a[k];
 				k--;
