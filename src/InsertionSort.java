@@ -15,15 +15,15 @@ public class InsertionSort {
 		for(int i=0;i<a.length;i++){
 			
 			int temp=a[i];
-			int k=i-1;
-			while(k>=0 && a[k]>temp){//這樣寫可以省一個迴圈
+			int indexBeforeTheI=i-1;
+			while(indexBeforeTheI>=0 && a[indexBeforeTheI]>temp){//這樣寫可以省一個迴圈
 				
-				a[k+1]=a[k];
-				k--;
+				a[indexBeforeTheI+1]=a[indexBeforeTheI];
+				indexBeforeTheI--;
 			}
-			//如果沒執行while回圈，放k+1剛好會放在下一項
-			//如果有執行while回圈，因為有k--, 放k+1會放在最前面
-			a[k+1]=temp;
+			//如果沒執行while回圈，放indexBeforeTheI+1剛好會放在下一項
+			//如果有執行while回圈，因為有indexBeforeTheI--, 放indexBeforeTheI+1會放在最前面
+			a[indexBeforeTheI+1]=temp;
 			
 		}
 		

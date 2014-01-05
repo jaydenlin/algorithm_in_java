@@ -17,15 +17,15 @@ public class SelectionSort {
 		for(int i=0;i<a.length;i++){
 			
 			//for迴圈的變形，當有可能會超過範圍時用while
-			int k=i+1;
-			while(k<a.length){
+			int indexAfterTheI=i+1;
+			while(indexAfterTheI<a.length){
 				
-				if(a[k]<a[index]){
+				if(a[indexAfterTheI]<a[index]){
 					
-					index=k;//更新index
+					index=indexAfterTheI;//更新index
 				}
 				
-				k++;
+				indexAfterTheI++;
 			}
 			
 			//switch
